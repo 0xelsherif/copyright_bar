@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright</title>
+    <style>
+       #slideout {
+            position: fixed;
+            top: 40%;
+            right: 0;
+            width: auto; /* changed width to auto */
+            padding: 12px 0;
+            text-align: center;
+            background: #21262d;
+            color: #c9d1d9;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            border-radius: 5px 0 0 5px;
+            display: flex; /* added flex display */
+            align-items: center; /* center items vertically */
+        }
+        #slideout_inner {
+            position: absolute;
+            top: 50%; /* changed to 50% to align with the middle of slideout */
+            transform: translateY(-50%); /* added to center vertically */
+            right: -250px;
+            background: #21262d;
+            width: 200px;
+            padding: 25px;
+            height: auto;
+            transition-duration: 0.3s;
+            text-align: left;
+            border-radius: 0 5px 5px 0;
+            display: flex; /* added flex display */
+            flex-direction: column; /* stack items vertically */
+            align-items: flex-start; /* align items to the start */
+        }
+        #slideout_inner a {
+            display: block;
+            color: #c9d1d9;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        #slideout:hover {
+            left: 90%;
+        }
+        #slideout:hover #slideout_inner {
+            right: 0;
+        }
+        #slideout p {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-right: 6px; /* added margin to separate the elements */
+        }
+        #slideout li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideout">
+        <p>© Your Name</p>
+        <ul id="slideout_inner">
+            <li><a href="https://github.com/your-github" target="_blank">GitHub</a></li>
+            <li><a href="https://medium.com/@your-medium" target="_blank">Medium</a></li>
+            <li><a href="https://twitter.com/your-twitter" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></li>
+        </ul>
+    </div>
+</body>
+</html>
