@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copyright Widget</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .copyright-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 50%; /* Center horizontally */
+        transform: translateX(50%); /* Center horizontally */
+    }
+
+    .copyright-widget button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .copyright-widget button:hover {
+        background-color: #0056b3;
+    }
+
+    .copyright-form {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        right: -150px;
+        width: 480px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        text-align: center;
+    }
+
+    .copyright-form ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .copyright-form li {
+        margin-bottom: 10px;
+        width: calc(50% - 5px);
+    }
+
+    .copyright-form a {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .copyright-form a:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="copyright-widget">
+    <button id="toggle-copyright-form">© Made with&nbsp;&#10084;&nbsp;by&nbsp;0xelsherif.</button>
+    <div class="copyright-form">
+        <ul>
+            <li><a href="https://github.com/0xelsherif/Word-Counter-Analyzer" target="_blank">Star me on GitHub Repo</a></li>
+            <li><a href="https://0xelsherif.medium.com/mastering-text-analysis-with-javascript-a-step-by-step-guide-f9914fb5b5f1" target="_blank">See Medium Publication</a></li>
+            <li><a href="https://twitter.com/0xelsherif" target="_blank">Follow me on Twitter</a></li>
+            <li><a href="https://github.com/0xelsherif/" target="_blank">Follow me on GitHub</a></li>
+            <li><a href="https://0xelsherif.medium.com/" target="_blank">Follow me on Medium</a></li>
+            <li><a href="https://www.linkedin.com/in/0xelsherif/" target="_blank">Connect me on LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById("toggle-copyright-form").addEventListener("click", function() {
+        var copyrightForm = document.querySelector(".copyright-form");
+        if (window.getComputedStyle(copyrightForm).display === "none") {
+            copyrightForm.style.display = "block";
+        } else {
+            copyrightForm.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
