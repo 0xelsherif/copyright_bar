@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Widget</title>
+<style>
+    .feedback-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .feedback-widget button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .feedback-widget button:hover {
+        background-color: #0056b3;
+    }
+
+    .feedback-form {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        right: 0;
+        width: 200px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .feedback-form ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .feedback-form li {
+        margin-bottom: 10px;
+    }
+
+    .feedback-form a {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .feedback-form a:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="feedback-widget">
+    <button id="toggle-feedback-form">© 0xelsherif</button>
+    <div class="feedback-form">
+        <ul>
+            <li><a href="https://github.com/0xelsherif/Word-Counter-Analyzer" target="_blank">Star me on GitHub Repo</a></li>
+            <li><a href="https://0xelsherif.medium.com/mastering-text-analysis-with-javascript-a-step-by-step-guide-f9914fb5b5f1" target="_blank">See Medium Publication</a></li>
+            <li><a href="https://twitter.com/0xelsherif" target="_blank">Follow me on Twitter</a></li>
+            <li><a href="https://github.com/0xelsherif/" target="_blank">Follow me on GitHub</a></li>
+            <li><a href="https://0xelsherif.medium.com/" target="_blank">Follow me on Medium</a></li>
+            <li><a href="https://www.linkedin.com/in/0xelsherif/" target="_blank">Connect with me on LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById("toggle-feedback-form").addEventListener("click", function() {
+        var feedbackForm = document.querySelector(".feedback-form");
+        if (window.getComputedStyle(feedbackForm).display === "none") {
+            feedbackForm.style.display = "block";
+        } else {
+            feedbackForm.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
