@@ -3,27 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feedback Widget</title>
+<title>Copyright Widget</title>
 <style>
-    .feedback-widget {
+    .copyright-widget {
         position: fixed;
         bottom: 20px;
         right: 20px;
     }
 
-    .feedback-widget button {
+    .copyright-widget button {
         background-color: #007bff;
         color: #fff;
         border: none;
         padding: 10px 20px;
+        border-radius: 5px;
         cursor: pointer;
     }
 
-    .feedback-widget button:hover {
+    .copyright-widget button:hover {
         background-color: #0056b3;
     }
 
-    .feedback-form {
+    .copyright-form {
         position: absolute;
         bottom: calc(100% + 10px);
         right: 0;
@@ -34,19 +35,20 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: none;
+        text-align: center;
     }
 
-    .feedback-form ul {
+    .copyright-form ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    .feedback-form li {
+    .copyright-form li {
         margin-bottom: 10px;
     }
 
-    .feedback-form a {
+    .copyright-form a {
         background-color: #007bff;
         color: #fff;
         text-decoration: none;
@@ -55,34 +57,34 @@
         display: block;
     }
 
-    .feedback-form a:hover {
+    .copyright-form a:hover {
         background-color: #0056b3;
     }
 </style>
 </head>
 <body>
 
-<div class="feedback-widget">
-    <button id="toggle-feedback-form">© 0xelsherif</button>
-    <div class="feedback-form">
+<div class="copyright-widget">
+    <button id="toggle-copyright-form">© Made with&nbsp;&#10084;&nbsp;by&nbsp;0xelsherif.</button>
+    <div class="copyright-form">
         <ul>
             <li><a href="https://github.com/0xelsherif/Word-Counter-Analyzer" target="_blank">Star me on GitHub Repo</a></li>
             <li><a href="https://0xelsherif.medium.com/mastering-text-analysis-with-javascript-a-step-by-step-guide-f9914fb5b5f1" target="_blank">See Medium Publication</a></li>
             <li><a href="https://twitter.com/0xelsherif" target="_blank">Follow me on Twitter</a></li>
             <li><a href="https://github.com/0xelsherif/" target="_blank">Follow me on GitHub</a></li>
             <li><a href="https://0xelsherif.medium.com/" target="_blank">Follow me on Medium</a></li>
-            <li><a href="https://www.linkedin.com/in/0xelsherif/" target="_blank">Connect with me on LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/0xelsherif/" target="_blank">Connect me on LinkedIn</a></li>
         </ul>
     </div>
 </div>
 
 <script>
-    document.getElementById("toggle-feedback-form").addEventListener("click", function() {
-        var feedbackForm = document.querySelector(".feedback-form");
-        if (window.getComputedStyle(feedbackForm).display === "none") {
-            feedbackForm.style.display = "block";
+    document.getElementById("toggle-copyright-form").addEventListener("click", function() {
+        var copyrightForm = document.querySelector(".copyright-form");
+        if (window.getComputedStyle(copyrightForm).display === "none") {
+            copyrightForm.style.display = "block";
         } else {
-            feedbackForm.style.display = "none";
+            copyrightForm.style.display = "none";
         }
     });
 </script>
